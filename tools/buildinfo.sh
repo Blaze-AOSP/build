@@ -55,4 +55,6 @@ if [ -n "$BUILD_THUMBPRINT" ] ; then
   echo "ro.build.thumbprint=$BUILD_THUMBPRINT"
 fi
 
+echo "com.blaze.device=$BLAZE_DEVICE"
+
 echo "# end build properties"
