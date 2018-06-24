@@ -1394,6 +1394,11 @@ function _complete_android_module_names() {
     COMPREPLY=( $(allmod | grep -E "^$word") )
 }
 
+# Make using all available CPUs
+function mka() {
+    m -j "$@"
+}
+
 # Print colored exit condition
 function pez {
     "$@"
