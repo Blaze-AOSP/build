@@ -18,8 +18,12 @@
 
 
 # Set lowram options and enable traced by default
+ifneq (,$(filter true, $(TARGET_BUILD_GO_UNRESTRICTED)))
 PRODUCT_PROPERTY_OVERRIDES += \
-     ro.config.low_ram=true \
+     ro.config.low_ram=true
+endif
+
+PRODUCT_PROPERTY_OVERRIDES += \
      persist.traced.enable=1 \
 
 # Speed profile services and wifi-service to reduce RAM and storage.
